@@ -8,6 +8,8 @@ import {UsersService} from '../users.service';
 })
 export class UsersListComponent implements OnInit {
   person:any;
+  selectedOne: any;
+  visible = false;
 
   constructor(private userService: UsersService) { }
 
@@ -15,4 +17,8 @@ export class UsersListComponent implements OnInit {
     this.person = this.userService.getAll();
   }
 
+  selectUser(item){
+    this.selectedOne = item;
+    this.visible = true;
+  }
 }

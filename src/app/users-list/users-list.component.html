@@ -1,10 +1,12 @@
-<ul>
+<ul [hidden]="visible">
   <li *ngFor="let item of person">
+    <a href="#" (click)="selectUser(item)">
       <h3>{{item.name}}</h3>
+    </a>
     <h4>Address:</h4>
     Street: {{item.address.street}}, {{item.address.suite}} <p>City: {{item.address.city}}, Zipcode: {{item.address.zipcode}}</p>
     <p>latitude: {{item.address.geo.lat}}, longitude: {{item.address.geo.lng}}</p>
   </li>
 </ul>
 
-
+<app-users-albums [userAlbum]="selectedOne"></app-users-albums>
