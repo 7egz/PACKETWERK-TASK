@@ -1,0 +1,10 @@
+<ul>
+  <li *ngFor="let item of person">
+      <h3>{{item.name}}</h3>
+    <h4>Address:</h4>
+    Street: {{item.address.street}}, {{item.address.suite}} <p>City: {{item.address.city}}, Zipcode: {{item.address.zipcode}}</p>
+    <p>latitude: {{item.address.geo.lat}}, longitude: {{item.address.geo.lng}}</p>
+  </li>
+</ul>
+
+
